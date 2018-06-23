@@ -1,0 +1,11 @@
+创建用户表
+  --进入数据库
+        mysql -hMYSQL -uMYSQL -pMYSQL
+  --创建数据库
+        create database users;
+  --创建数据表
+       create table stu(
+       id int(5) unsigned not null auto_increment primary key,
+       name varchar(8) not null,
+       sex enum('w','m') not null default 'm',
+       email varchar(64) not null unique);
